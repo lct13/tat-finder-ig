@@ -1,0 +1,150 @@
+html {
+  font-size: 14px;
+  --light-tan: #cbc7da;
+  --tan: #718064;
+  --dark-tan: #2b3536;
+  --gween: #3aee8b;
+  --orange: rgb(214, 84, 23);
+  --black: rgb(43, 40, 51);
+  background-color: var(--dark-tan);
+}
+/* tablet */
+@media only screen and (min-width: 480px) {
+  html {
+      font-size: 12px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 768px) {
+  html {
+      font-size: 16px;
+  }
+}
+/* extra large */
+@media only screen and (min-width: 1024px) {
+  html {
+      font-size: 18px;
+  }
+}
+
+.form {
+    font-size: 1.5rem;;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    border: solid 4px var(--tan);
+    border-radius: 30px;
+    background-color: var(--tan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: max-content;
+    padding: 1rem;
+  }
+  
+.label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Dokdo', monospace;
+    color: var(--light-tan);
+    margin-bottom: 1rem;
+  }
+  
+input {
+    background-color: var(--light-tan);
+    /* border: solid 2px var(--tan); */
+    color: var(--orange);
+    font-family: monospace;
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    border-radius: 50px;
+    height: 1.5rem;
+    padding-left: 0.5rem;
+  }
+  
+select {
+    background-color: var(--light-tan);
+    border: solid 1px var(--tan);
+    color: var(--orange);
+    font-family: monospace;
+    border-radius: 50px;
+    padding-left: 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    vertical-align: middle;
+  }
+  
+option {
+    color: var(--tan);
+  }
+  
+option selected {
+    color: var(--orange);
+  }
+  
+.name {
+    color: var(--tan);
+    margin-top: -4rem;
+    margin-left: 3rem;
+    width: 50%;
+  }
+  
+  .website {
+    margin-left: 33vw;
+  }
+  
+  .website div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .website span {
+    color: var(--tan);
+    margin-right: 15rem;
+    margin-top: 0.4rem;
+    position: absolute;
+  }
+  
+  .website input {
+    padding-left: 2.5rem;
+  }
+  
+  .location {
+    margin-left: -10vw;
+    width: 50%;
+  }
+  
+  .submit {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    padding: 0;
+    background-color: var(--orange);
+    border-radius: 50%;
+    color: var(--orange);
+  }
+  
+  .submit:hover {
+    background-color: transparent;
+    color: var(--orange);
+  }
+  
+  .specializations {
+    width: 100%;
+  }
+  
+  .specializations > p {
+    margin-bottom: 0.2rem;
+  }
+  
+  .tags-input {
+    border: solid 3px var(--light-tan);
+    border-radius: 20px;
+    background-color: var(--light-tan);
+    color: var(--orange);
+    font-family: monospace;
+    font-size: 0.8rem;
+  }
