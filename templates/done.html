@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><body>
+    <head>
+      <link rel="stylesheet" href="static/index.css">
+    </head>
+    <div class="form">
+        <p>This is what @{{artist['ig']}} will look like on our site:) You're all set, give us a couple days to verify your profile.</p>
+        <div class='card'>
+            <a href="{{'https://www.instagram.com/'+ artist['ig']}}" target="_blank" rel='noreferrer' class='artist-name'>{{artist['name']}}</a>
+            <div class='artist-location'>{{artist['location']}}</div>
+            <div class="ig-grid">
+                {% for med in media %}
+                <img class='ig-thumbnail' id="{{med['id']}}" src="{{med['media_url']}}">
+                {% endfor %}
+             </div>
+        </div>
+    </div>
+</body></html>

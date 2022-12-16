@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><body>
+    <head>
+      <link rel="stylesheet" href="static/index.css">
+    </head>
+    <div class="form">
+        <p id="p">Welcome to Tatzfinder, @{{ig}}! Choose up to 3 pieces to showcase on the website to make it easier for potential custys to find you B)</p>
+        <div class="ig-grid">
+          {% for med in media %}
+          <img class='ig-thumbnail' id="{{med['id']}}" src="{{med['media_url']}}">
+          {% endfor %}
+        </div>
+        <form action="done" method="get">
+          <input type="text" id="photoids" name="photoids"/>
+          <input type="submit" class="submit" value="Go"/>
+        </form>
+    </div>
+<script>
+  document.getElementById("p").textContent="helloreee"
+  var photoIDs = [];
+  Array.from(document.getElementsByClassName("ig-thumbnail")).forEach(img=>{
+    // document.getElementById("p").textContent = img.id;
+    // photoIDs.push(img.id);
+    // document.getElementById("p").textContent = photoIDs.toString();
+    img.addEventListener("click", ()=>{
+      document.getElementById("p").textContent=img.id;
+      if (photoIDs.includes(img.id)){
+        photoIDs.splice(photoIDs.indexOf(img.id), 1);
+        img.classList.remove('selected');     
+      } else if (photoIDs.length < 3){
+        photoIDs.push(img.id);
+        img.classList.add('selected');
+      }
+      document.getElementById("photoids").value = photoIDs.toString();
+    })
+  });
+</script>
+</body>
+</html>

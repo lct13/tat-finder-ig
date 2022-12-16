@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  font-family: monospace;
   --light-tan: #cbc7da;
   --tan: #718064;
   --dark-tan: #2b3536;
@@ -27,14 +28,18 @@ html {
   }
 }
 
+.form-wrapper{
+  scroll-snap-type: both mandatory;
+}
 .form {
+  scroll-snap-align: center;
     font-size: 1.5rem;;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     margin-top: 5vw;
     margin-bottom: 5vw;
     border: solid 4px var(--tan);
-    border-radius: 30px;
+    border-radius: 1rem;
     background-color: var(--tan);
     display: flex;
     flex-direction: column;
@@ -42,7 +47,29 @@ html {
     height: max-content;
     padding: 1rem;
   }
-  
+  button{
+    border:2px solid rgb(214, 84, 23);
+    background-color: var(--light-tan);
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+  .ig-login{
+    font-size: 1.2rem;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skip{
+    background-color: transparent;
+    text-decoration: underline;
+  }
 .label {
     display: flex;
     flex-direction: column;
@@ -52,6 +79,10 @@ html {
     margin-bottom: 1rem;
   }
   
+label p{
+  font-size: 0.5rem;
+  text-align: right;
+}
 input {
     background-color: var(--light-tan);
     /* border: solid 2px var(--tan); */
@@ -117,18 +148,24 @@ option selected {
     width: 50%;
   }
   
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .submit {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 2rem;
-    padding: 0;
+    text-decoration: none;
+    height:min-content;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border-radius: 2rem;
+    color: var(--light-tan);
     background-color: var(--orange);
-    border-radius: 50%;
-    color: var(--orange);
   }
   
   .submit:hover {
-    background-color: transparent;
+    background-color: var(--light-tan);
     color: var(--orange);
   }
   
@@ -148,3 +185,53 @@ option selected {
     font-family: monospace;
     font-size: 0.8rem;
   }
+
+  .ig-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1vw;
+  }
+
+  .ig-thumbnail {
+    width:10vw;
+    height:10vw;
+    margin:1px;
+    object-fit: cover;
+  }
+
+ .selected{
+  border: 2px solid greenyellow;
+  opacity: 0.5;
+ }
+
+ #photoids{
+  display: none;
+ }
+
+ .card {
+  background-color: var(--light-tan);
+  border-radius: 1rem;
+  width: 20vw;
+  min-width: fit-content;
+  margin: 2vw;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--tan);
+  font-family: 'Dokdo', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  color: var(--orange);
+  text-decoration-color: plum;
+  margin: 0px;
+}
+
+a:hover {
+  border: solid 2px plum;
+}

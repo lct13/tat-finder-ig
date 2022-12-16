@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><body>
+  <head>
+    <link rel="stylesheet" href="static/index.css">
+  </head>
+  <div class="form">
+    <form action="works" method="get">
+      <label class='name label'>
+        artist's name
+        <input type="text" name="name" className='input'/>
+      </label>
+
+      <label class='website label'>
+        instagram
+        <p>if this is not your work ig, log out at <a href="https://www.instagram.com/" target="_blank">instagram.com</a> and <a href="https://tootopus.pythonanywhere.com/">try again</a>.</p>
+        <div>
+          <span class='handle'>@</span>
+          <input type="text" name="ig" value="{{ig}}"/>
+        </div>
+      </label>  
+
+      <label class='location label'>
+        location
+        <input type="text" name="location" className='input' alt="(city, state abbr) Eg: Seattle, WA"/>
+        <!-- <select class='states input'>
+          <option value="" selected disabled hidden>state</option>
+          {states.map((json, i) => {
+            const state = json.isoCode;
+            return (<option value={state} key={i}>
+            {state}</option>);
+          })}
+        </select>
+        <select class='cities input'>
+        onChange={(e) => setLocation(e.target.value + " " + state)}>
+        <option value="" selected disabled hidden>city</option>
+          {City.getCitiesOfState('US', state).map((json, i) => {
+            const city = json.name;
+            return (<option value={city} key={i}>
+            {city}</option>);
+          })}
+        </select> -->
+      </label>        
+      <!-- <div class='specializations label'>
+        <p>has experience with
+          {/* <InfoButton /> */}
+        </p>
+        <div class="tags-input">
+          <TagSelection allTags={suggestions} updateTags={updateTags}/>
+        </div>
+      </div> -->
+      <div class="buttons">
+        <a class='submit' href="/">back</a>
+        <input type="submit" class="submit" value="Next"/>
+      </div>
+    </form>
+  </div>
+</body></html>
